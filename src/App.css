@@ -1,42 +1,210 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.root {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .logo {
+	height: 6em;
+	padding: 1.5em;
+	will-change: filter;
+	transition: filter 300ms;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .logo:hover {
+	filter: drop-shadow(0 0 2em #646cffaa);
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+  .logo.react:hover {
+	filter: drop-shadow(0 0 2em #61dafbaa);
+  }
+  
+  @keyframes logo-spin {
+	from {
+	  transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(360deg);
+	}
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+	a:nth-of-type(2) .logo {
+	  animation: logo-spin infinite 20s linear;
+	}
+  }
+  
+  .card {
+	padding: 2em;
+  }
+  
+  .read-the-docs {
+	color: #888;
+  }
+  
+  body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	background-attachment: fixed;
+	background-color: rgba(0, 0, 0, 0.877);
+  }
+  
+  .carousel-example {
+	width: 30%;
+	margin: 0 auto;
+	margin-top: 120px;
+	margin-bottom: 120px;
+  }
+  
+  .carousel-item img {
+	width: 100%;
+	height: auto;
+  }
+  
+  /* Portfolio Section */
+  .portfolio {
+	padding: 40px 0 100px 0;
+  }
+  .categories {
+	margin-bottom: 80px;
+  }
+  ul.cat li {
+	display: inline-block;
+  }
+  ol.type li {
+	display: inline-block;
+	margin-right: 20px;
+  }
+  ol.type li a {
+	font-family: 'Montserrat', sans-serif;
+	color: #444;
+	font-size: 14px;
+	padding: 10px 20px;
+	border: 2px solid #444;
+	border-radius: 0;
+	text-transform: uppercase;
+  }
+  ol.type li a.active {
+	background: #444;
+	color: #eee;
+  }
+  ol.type li a:hover {
+	background: #E0004D;
+	color: #eee;
+  }
+  .isotope-item {
+	z-index: 2;
+  }
+  .isotope-hidden.isotope-item {
+	z-index: 1;
+  }
+  .isotope,
+  .isotope .isotope-item {
+	/* change duration value to whatever you like */
+	-webkit-transition-duration: 0.8s;
+	-moz-transition-duration: 0.8s;
+	transition-duration: 0.8s;
+  }
+  .isotope-item {
+	margin-right: -1px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	padding: 0 10px;
+  }
+  .isotope {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition-property: height, width;
+	-moz-transition-property: height, width;
+	transition-property: height, width;
+  }
+  .isotope .isotope-item {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition-property: -webkit-transform, opacity;
+	-moz-transition-property: -moz-transform, opacity;
+	transition-property: transform, opacity;
+  }
+  .portfolio-item {
+	margin: 10px 0;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+  }
+  .portfolio-item .hover-bg {
+	overflow: hidden;
+	position: relative;
+  }
+  .hover-bg .hover-text {
+	position: absolute;
+	text-align: center;
+	margin: 0 auto;
+	color: #E0004D;
+	background: rgba(255, 255, 255, 0.75);
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: all 0.5s;
+  }
+  .hover-bg .hover-text .overlay-caption {
+	display: table;
+	height: 100%;
+	width: 100%;
+  }
+  .hover-bg .hover-text .overlay-caption .overlay-content {
+	display: table-cell;
+	vertical-align: middle;
+  }
+  .hover-bg:hover .hover-text {
+	opacity: 1;
+  }
+  
+  .wrapper {
+	overflow-x: hidden;
+  }
+  
+  .sidebar-wrapper {
+	min-height: 100vh;
+	margin-left: -15rem;
+	-webkit-transition: margin 0.25s ease-out;
+	-moz-transition: margin 0.25s ease-out;
+	-o-transition: margin 0.25s ease-out;
+	transition: margin 0.25s ease-out;
+	background-color: hotpink;
+  }
+  
+  .sidebar-wrapper .sidebar-heading {
+	padding: 0.875rem 1.25rem;
+	font-size: 1.2rem;
+  }
+  
+  .sidebar-wrapper .list-group {
+	width: 15rem;
+	background-color: hotpink;
+  }
+  
+  .page-content-wrapper {
+	min-width: 100vw;
+  }
+  
+  .wrapper.toggled .sidebar-wrapper {
+	margin-left: 0;
+  }
+  
+  @media (min-width: 768px) {
+	.sidebar-wrapper {
+	  margin-left: 0;
+	}
+  
+	.page-content-wrapper {
+	  min-width: 0;
+	  width: 100%;
+	}
+  
+	.wrapper.toggled .sidebar-wrapper {
+	  margin-left: -15rem;
+	}
+  }
+  
