@@ -1,10 +1,12 @@
 import React from 'react';
+import './App.css';
+
 
 const images = [
-  'img/portfolio/10Nos_imprudences (35 sur 173).jpg',
-  'img/portfolio/Fang356.jpg',
-  'img/portfolio/novembre525.jpg',
-  // Add all your image paths here
+  'assets/images/creamsoda2.jpg',
+  'assets/images/raisa.jpg',
+  'assets/images/raisa2.jpg',
+  'assets/images/randy.jpg'
 ];
 
 const Carousel = () => {

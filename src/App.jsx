@@ -1,13 +1,19 @@
 import React from 'react';
 import Sidebar from './components/Sidebar';
 import Carousel from './components/Carousel';
+import Portfolio from './components/Portfolio';
+
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function App() {
   return (
-    <div id="wrapper">
+    <div className="wrapper">
       <Sidebar />
-      <div id="page-content-wrapper">
+      <div className="page-content-wrapper">
         <Carousel />
+        <Portfolio />
       </div>
     </div>
   );
