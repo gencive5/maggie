@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './App.css';
+import "../App.css";
+
 
 const Sidebar = () => {
   const [isToggled, setIsToggled] = useState(false);
