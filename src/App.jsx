@@ -1,6 +1,6 @@
 import React from 'react';
 import Sidebar from './components/Sidebar';
-import Carousel from './components/Carousel';
+
 import Portfolio from './components/Portfolio';
 
 import './App.css';
@@ -12,7 +12,7 @@ function App() {
     <div className="wrapper">
       <Sidebar />
       <div className="page-content-wrapper">
-        <Carousel />
+       
         <Portfolio />
       </div>
     </div>

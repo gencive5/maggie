@@ -1,4 +1,10 @@
 import React, { useEffect } from "react";
+import "../App.css";
+import creamsoda from "/assets/images/creamsoda2.jpg";
+import randy from "/assets/images/randy.jpg";
+import raisa2 from "/assets/images/raisa2.jpg";
+import sasha from "/assets/images/sasha.jpg";
+
 
 const Portfolio = () => {
   useEffect(() => {
@@ -29,20 +35,35 @@ const Portfolio = () => {
     };
   }, []);
 
-  const portfolioItems = [
-    { src: "assets/images/creamsoda2.jpg", title: "creamsoda" },
-    { src: "images/randy.jpg", title: "randy" },
-    { src: "images/raisa.jpg", title: "RaisaVanessa" },
-    { src: "images/raisa2.jpg", title: "RaisaVanessa" },
-    { src: "images/sasha.jpg", title: "SashaGymn" },
-    { src: "images/creamsoda2.jpg", title: "creamsoda" },
-    { src: "images/creamsoda2.jpg", title: "creamsoda" },
-    { src: "images/creamsoda2.jpg", title: "creamsoda" },
-  ];
+ const portfolioItems = [
+  { src: creamsoda, title: "creamsoda" },
+  { src: randy, title: "randy" },
+  { src: raisa2, title: "RaisaVanessa" },
+  { src: sasha, title: "SashaGymn" },
+  { src: creamsoda, title: "creamsoda" },
+  { src: randy, title: "randy" },
+  { src: raisa2, title: "RaisaVanessa" },
+  { src: sasha, title: "SashaGymn" },
+  { src: sasha, title: "SashaGymn" },
+  { src: creamsoda, title: "creamsoda" },
+  { src: randy, title: "randy" },
+  { src: raisa2, title: "RaisaVanessa" },
+  { src: sasha, title: "SashaGymn" },
+  { src: creamsoda, title: "creamsoda" },
+  { src: randy, title: "randy" },
+  { src: raisa2, title: "RaisaVanessa" },
+  { src: sasha, title: "SashaGymn" },
+  { src: sasha, title: "SashaGymn" },
+  { src: creamsoda, title: "creamsoda" },
+  { src: randy, title: "randy" },
+  { src: raisa2, title: "RaisaVanessa" },
+  { src: sasha, title: "SashaGymn" },
+];
 
   return (
     <div className="container">
       <div className="row">
+
         {/* Column One */}
         <div data-rate="-3" data-direction="vertical" className="scroll col-xs-12 col-sm-6 col-md-4">
           {portfolioItems.slice(0, 4).map((item, index) => (
