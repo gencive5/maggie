@@ -30,14 +30,14 @@ const Portfolio = () => {
   }, []);
 
   const portfolioItems = [
-    { src: "images/creamsoda2.jpg", title: "NosImprudences-MadaniClockwise" },
-    { src: "images/randy.jpg", title: "FangDong-Knas" },
-    { src: "images/raisa.jpg", title: "Knas" },
-    { src: "images/raisa2.jpg", title: "TonyZhou" },
-    { src: "images/sasha.jpg", title: "Knas" },
-    { src: "images/creamsoda2.jpg", title: "WuJiamin" },
-    { src: "images/creamsoda2.jpg", title: "BaherKhairy" },
-    { src: "images/creamsoda2.jpg", title: "RayonFrais" },
+    { src: "assets/images/creamsoda2.jpg", title: "creamsoda" },
+    { src: "images/randy.jpg", title: "randy" },
+    { src: "images/raisa.jpg", title: "RaisaVanessa" },
+    { src: "images/raisa2.jpg", title: "RaisaVanessa" },
+    { src: "images/sasha.jpg", title: "SashaGymn" },
+    { src: "images/creamsoda2.jpg", title: "creamsoda" },
+    { src: "images/creamsoda2.jpg", title: "creamsoda" },
+    { src: "images/creamsoda2.jpg", title: "creamsoda" },
   ];
 
   return (
