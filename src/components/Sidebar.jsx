@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "../App.css";
+import sidebar from "/assets/images/sidebar2.png";
 
 
 const Sidebar = () => {
@@ -11,16 +12,10 @@ const Sidebar = () => {
 
   return (
     <div className={`wrapper ${isToggled ? 'toggled' : ''}`}>
-      <button onClick={handleToggle} className="btn btn-primary">
-        Toggle Sidebar
-      </button>
+      
       <div className="sidebar-wrapper">
-        <div className="sidebar-heading">Simple Sidebar</div>
-        <ul className="list-group">
-          <li className="list-group-item">Link 1</li>
-          <li className="list-group-item">Link 2</li>
-          <li className="list-group-item">Link 3</li>
-        </ul>
+      <img src={sidebar} className="d-block"/>
+        
       </div>
     </div>
   );
