@@ -168,13 +168,18 @@
   }
   
   .sidebar-wrapper {
-	min-height: 100vh;
-	margin-left: -15rem;
+	width: 15%; /* Fixed width for the sidebar */
+	top: 0;
+	left: 0;
+	
+	background-color: #333;
+	color: #fff;
+	
 	-webkit-transition: margin 0.25s ease-out;
 	-moz-transition: margin 0.25s ease-out;
 	-o-transition: margin 0.25s ease-out;
 	transition: margin 0.25s ease-out;
-	background-color: rgb(223, 255, 105);
+	background-color:transparent;
   }
   
   .sidebar-wrapper .sidebar-heading {
@@ -184,11 +189,12 @@
   
   .sidebar-wrapper .list-group {
 	width: 15rem;
-	background-color: rgb(210, 255, 105);
+	background-color: transparent;
   }
   
   .page-content-wrapper {
-	min-width: 100vw;
+	margin-left: 15%; 
+	width: 85%; 
   }
   
   .wrapper.toggled .sidebar-wrapper {
@@ -212,6 +218,11 @@
   
   .img-responsive {
 
-	width: 10%;
-	height: 10%;
+	width: 100%; /* Ensure images take up full width of the column */
+  height: auto;
+  }
+
+  .container {
+
+	width: 100%;
   }
