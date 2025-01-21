@@ -106,7 +106,7 @@ const Portfolio = () => {
 
         {/* Column Three */}
         <div data-rate="-1" data-direction="vertical" className="scroll col-xs-12 col-sm-6 col-md-4">
-          {portfolioItems.map((item, index) => (
+        {portfolioItems.slice(8, 12).map((item, index) => (
             <div className="dolor" key={index}>
               <div className="portfolio-item">
                 <div className="hover-bg">
