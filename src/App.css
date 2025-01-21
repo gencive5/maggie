@@ -174,7 +174,7 @@
 	-moz-transition: margin 0.25s ease-out;
 	-o-transition: margin 0.25s ease-out;
 	transition: margin 0.25s ease-out;
-	background-color: hotpink;
+	background-color: rgb(223, 255, 105);
   }
   
   .sidebar-wrapper .sidebar-heading {
@@ -184,7 +184,7 @@
   
   .sidebar-wrapper .list-group {
 	width: 15rem;
-	background-color: hotpink;
+	background-color: rgb(210, 255, 105);
   }
   
   .page-content-wrapper {
