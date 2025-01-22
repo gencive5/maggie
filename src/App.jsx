@@ -9,7 +9,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function App() {
   return (
-    <div className="wrapper">
+    <div className="wrapperr">
       <Sidebar />
       <div className="page-content-wrapper">
         <Portfolio />

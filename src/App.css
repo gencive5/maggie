@@ -15,7 +15,7 @@ body {
 	text-align: center;
   }
   
-  .wrapper {
+  .wrapperr {
 	
     display: flex;
 	flex-direction: row; /* Arrange children horizontally */
@@ -36,6 +36,7 @@ body {
   @media (min-width: 768px) {
 	.sidebar-wrapper {
 	  margin-left: 0;
+	  width: 7rem;
 	}
 	.page-content-wrapper {
 	  min-width: 0;
@@ -54,6 +55,20 @@ body {
 	  width: 100%;
 	  margin-left: 0;
 	}
+
+	.sidebar-wrapper {
+	  margin-left: 0;
+	  width: 4rem;
+	}
+
+	.wrapper {
+	
+		display: flex;
+		flex-direction: row; /* Arrange children horizontally */
+		width: 4rem;
+		
+	  }
+	  
 	
   }
   
@@ -63,6 +78,14 @@ body {
 	background-color: transparent;
 	transition: margin 0.25s ease-out;
 	z-index: 0;
+  }
+
+  .wrapper {
+	
+    display: flex;
+	flex-direction: row; /* Arrange children horizontally */
+	width: 7rem;
+	
   }
   
   /* Portfolio */
