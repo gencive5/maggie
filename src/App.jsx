@@ -12,7 +12,6 @@ function App() {
     <div className="wrapper">
       <Sidebar />
       <div className="page-content-wrapper">
-       
         <Portfolio />
       </div>
     </div>
