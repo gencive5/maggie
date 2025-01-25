@@ -1,7 +1,8 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
-
 import Portfolio from './components/Portfolio';
+import ImageCarousel from './components/ImageCarousel';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -9,12 +10,17 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function App() {
   return (
-    <div className="wrapperr">
-      <Sidebar />
-      <div className="page-content-wrapper">
-        <Portfolio />
+    <Router>
+      <div className="wrapperr">
+        <Sidebar />
+        <div className="page-content-wrapper">
+          <Routes>
+            <Route path="/" element={<Portfolio />} />
+            <Route path="/carousel" element={<ImageCarousel />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
