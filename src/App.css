@@ -16,7 +16,6 @@ body {
   }
   
   .wrapperr {
-	
     display: flex;
 	flex-direction: row; /* Arrange children horizontally */
 	height: 100vh; /* Full height of the viewport */
@@ -62,13 +61,11 @@ body {
 	}
 
 	.wrapper {
-	
-		display: flex;
-		flex-direction: row; /* Arrange children horizontally */
-		width: 4rem;	
-	  }
+	   display: flex;
+	   flex-direction: row; /* Arrange children horizontally */
+	   width: 4rem;	
+	}
 	  
-	
   }
   
   /* Sidebar */
@@ -144,16 +141,7 @@ body {
   }
   
   
-  /* Carousel */
-  .carousel-example {
-	width: 30%;
-	margin: 120px auto;
-  }
-  
-  .carousel-item img {
-	width: 100%;
-	height: auto;
-  }
+
   
   /* Scroll Effects */
   .scroll {
@@ -178,6 +166,8 @@ body {
 	position: relative;
 	padding: 20px;
 	text-align: center;
+	width: 100%;
+	height: auto;
   }
   
   .back-button {
@@ -191,6 +181,7 @@ body {
 	border-radius: 5px;
 	cursor: pointer;
 	font-size: 16px;
+	z-index: 500;
   }
   
   .back-button:hover {
@@ -198,14 +189,18 @@ body {
   }
   
   .carousel-swiper {
-	width: 80%;
-	margin: 0 auto;
-  }
+    width: 100%;
+    max-width: 800px; /* Set a max width for the Swiper */
+    margin: 0 auto;
+}
   
-  .carousel-item img {
-	width: 100%;
-	border-radius: 10px;
-  }
+  .img-slide {
+    width: 80%; /* Ensure the image fits within the container */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: contain; /* Ensure the entire image is visible */
+    display: block;
+    margin: 0 auto; /* Center the image */
+}
   
   .carousel-item h3 {
 	margin-top: 10px;
