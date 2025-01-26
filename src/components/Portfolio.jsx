@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import "../App.css";
 import creamsoda from "/assets/images/creamsoda2.jpg";
 import randy from "/assets/images/randy.jpg";
@@ -7,7 +6,7 @@ import raisa2 from "/assets/images/raisa2.jpg";
 import sasha from "/assets/images/sasha.jpg";
 
 const Portfolio = () => {
-  const navigate = useNavigate();
+  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,10 +52,12 @@ const Portfolio = () => {
     { src: sasha, title: "SashaGymn" },
   ];
 
-  const handleImageClick = (index) => {
-    navigate("/carousel", {
-      state: { selectedIndex: index, items: portfolioItems },
-    });
+  const handleImageClick = (image) => {
+    setSelectedImage(image);
+  };
+
+  const closeImageModal = () => {
+    setSelectedImage(null);
   };
 
   return (
@@ -70,20 +71,11 @@ const Portfolio = () => {
         >
           {portfolioItems.slice(0, 4).map((item, index) => (
             <div className="portfolio-item" key={index}>
-              <div className="hover-bg">
-                <div
-                  className="hover-text"
-                  onClick={() => handleImageClick(index)}
-                >
-                  <div className="overlay-caption">
-                    <div className="overlay-content">{item.title}</div>
-                  </div>
-                </div>
+              <div className="hover-bg" onClick={() => handleImageClick(item)}>
                 <img
                   src={item.src}
                   className="img-responsive"
                   alt={item.title}
-                  onClick={() => handleImageClick(index)}
                 />
               </div>
             </div>
@@ -98,20 +90,11 @@ const Portfolio = () => {
         >
           {portfolioItems.slice(4, 8).map((item, index) => (
             <div className="portfolio-item" key={index}>
-              <div className="hover-bg">
-                <div
-                  className="hover-text"
-                  onClick={() => handleImageClick(index + 4)}
-                >
-                  <div className="overlay-caption">
-                    <div className="overlay-content">{item.title}</div>
-                  </div>
-                </div>
+              <div className="hover-bg" onClick={() => handleImageClick(item)}>
                 <img
                   src={item.src}
                   className="img-responsive"
                   alt={item.title}
-                  onClick={() => handleImageClick(index + 4)}
                 />
               </div>
             </div>
@@ -126,26 +109,31 @@ const Portfolio = () => {
         >
           {portfolioItems.slice(8, 12).map((item, index) => (
             <div className="portfolio-item" key={index}>
-              <div className="hover-bg">
-                <div
-                  className="hover-text"
-                  onClick={() => handleImageClick(index + 8)}
-                >
-                  <div className="overlay-caption">
-                    <div className="overlay-content">{item.title}</div>
-                  </div>
-                </div>
+              <div className="hover-bg" onClick={() => handleImageClick(item)}>
                 <img
                   src={item.src}
                   className="img-responsive"
                   alt={item.title}
-                  onClick={() => handleImageClick(index + 8)}
                 />
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div className="image-modal" onClick={closeImageModal}>
+          <div className="modal-content">
+            <img
+              src={selectedImage.src}
+              alt={selectedImage.title}
+              className="img-responsive"
+            />
+            <div className="modal-title">{selectedImage.title}</div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
