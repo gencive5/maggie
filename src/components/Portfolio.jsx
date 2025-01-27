@@ -55,7 +55,7 @@ const Portfolio = () => {
     { src: raisa2, title: "RaisaVanessa" },
     { src: sasha, title: "SashaGymn" },
     { src: creamsoda3, title: "creamsoda2" },
-    { src: sasha2, title: "SashaGymn2" },
+    { src: sasha2, title: "SashaGymn" },
     { src: fang, title: "FangDong" },
     { src: fang3, title: "FangDong" },
     { src: fang2, title: "FangDong" },
