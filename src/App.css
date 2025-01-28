@@ -1,3 +1,33 @@
+@font-face {
+	font-family: 'myriadpro';
+	src: url('/myriadpro.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+@font-face {
+	font-family: 'myriadpro';
+	src: url('/myriadpro.woff2') format('woffé');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+  @font-face {
+	font-family: 'mutlu';
+	src: url('/mutlu.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+@font-face {
+	font-family: 'mutlu';
+	src: url('/mutlu.woff2') format('woffé');
+	font-weight: normal;
+	font-style: normal;
+  }
+  
+
+
 /* General Reset */
 body {
 	margin: 0;
@@ -139,8 +169,6 @@ body {
 	width: 100%;
 	height: auto;
   }
-  
-  
 
   
   /* Scroll Effects */
@@ -158,7 +186,7 @@ body {
   }
    
   html::-webkit-scrollbar-thumb {
-	background: red;
+	background: #e72700;
 	
   }
 
@@ -174,7 +202,7 @@ body {
 	position: absolute;
 	top: 20px;
 	left: 20px;
-	background-color: #e0004d;
+	background-color: #e72700;
 	color: white;
 	border: none;
 	padding: 10px 20px;
@@ -185,7 +213,7 @@ body {
   }
   
   .back-button:hover {
-	background-color: #a00036;
+	background-color: #e72700;
   }
   
   .carousel-swiper {
@@ -242,7 +270,9 @@ body {
 	margin-top: 10px;
 	text-align: center;
 	font-size: 1.2em;
-	color: #333;
+	color: #0000a2;
+	font-family: 'myriadpro', sans-serif; 
+	font-size: 1.2em;
   }
   
   .image-modal:hover {
