@@ -121,7 +121,7 @@ const Portfolio = () => {
           data-direction="vertical"
           className="scroll col-xs-12 col-sm-6 col-md-4"
         >
-          {portfolioItems.slice(11, 16).map((item, index) => (
+          {portfolioItems.slice(11, 15).map((item, index) => (
             <div className="portfolio-item" key={index}>
               <div className="hover-bg" onClick={() => handleImageClick(item)}>
                 <img
