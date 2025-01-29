@@ -22,18 +22,19 @@ const Portfolio = () => {
   useEffect(() => {
     const handleScroll = () => {
       const targets = document.querySelectorAll(".scroll");
-      const isMobile = window.innerWidth <= 768; // Mobile detection
+      const isMobile = window.innerWidth <= 768; // Check for mobile screen size
 
       targets.forEach((target) => {
         let rate = parseFloat(target.dataset.rate || "0");
         const direction = target.dataset.direction || "vertical";
 
         if (isMobile) {
-          rate *= 0.03; // Reduce the rate by 70% on mobile
+          rate *= 0.03; // Reduce the parallax rate by 70% on mobile
         }
 
         if (direction === "vertical") {
-          const pos = window.pageYOffset * rate;
+          const speedMultiplier = isMobile ? 25 : 1; // Increase scrolling speed for mobile
+          const pos = window.pageYOffset * rate * speedMultiplier;
           target.style.transform = `translate3d(0px, ${pos}px, 0px)`;
         } else {
           const rateX = parseFloat(target.dataset.ratex || "0");
