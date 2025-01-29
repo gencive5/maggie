@@ -2,7 +2,8 @@ import { useEffect } from "react";
 
 const MobileParallax = () => {
   useEffect(() => {
-    let ticking = false; // Prevent excessive scroll event calls
+    let lastScrollY = window.scrollY; // Store last scroll position
+    let ticking = false; // Prevent redundant updates
 
     const handleScroll = () => {
       if (ticking) return; // Skip if already updating
@@ -13,16 +14,15 @@ const MobileParallax = () => {
         if (!isMobile) return;
 
         const sidebar = document.querySelector(".sidebar-wrapper");
-        const portfolio = document.querySelector(".page-content-wrapper");
 
-        if (sidebar && portfolio) {
+        if (sidebar) {
           const scrollY = window.scrollY;
 
-          // Apply smooth parallax effect
-          sidebar.style.transform = `translate3d(0, ${scrollY * 0.2}px, 0)`;
-          portfolio.style.transform = `translate3d(0, ${scrollY * 0.6}px, 0)`;
+          // Sidebar moves slower (parallax effect), portfolio is unchanged
+          sidebar.style.transform = `translate3d(0, ${scrollY * 0.3}px, 0)`;
         }
 
+        lastScrollY = window.scrollY; // Update last position
         ticking = false; // Allow next update
       });
     };
@@ -31,7 +31,7 @@ const MobileParallax = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return null; // This component is only for effects, no UI
+  return null; // No UI rendering, just effects
 };
 
 export default MobileParallax;
