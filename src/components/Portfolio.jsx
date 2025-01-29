@@ -60,7 +60,7 @@ const Portfolio = () => {
     { src: creamsoda3, title: "Tim Gao" },
     { src: creamsoda2, title: "Tim Gao" },
     { src: fang2, title: "Knas Vang, Heavy Herbe" },
-    { src: richemond, title: "Richemond Ourega, Hôtel Dinosaure Club" },
+    { src: richemond, title: "Hôtel Dinosaure Mag" },
     { src: fang357, title: "Knas Vang, Heavy Herbe" },
     { src: fievre, title: "Fièvre" },
     { src: roversi, title: "Nicola Delorme" },
