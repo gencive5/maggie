@@ -88,7 +88,14 @@ body {
 	.sidebar-wrapper {
 	  margin-left: 0;
 	  width: 4rem;
-	}
+		will-change: transform;
+		transition: transform 0.1s ease-out;
+		
+		top: 0;
+		left: 0;
+ /* Makes sure it spans full height */
+		
+	  }
 
 	.wrapper {
 	   display: flex;
