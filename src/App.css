@@ -95,6 +95,11 @@ body {
 	   flex-direction: row; /* Arrange children horizontally */
 	   width: 4rem;	
 	}
+
+	.sidebar-wrapper, .page-content-wrapper {
+		will-change: transform;
+		transition: transform 0.1s ease-out;
+	  }
 	  
   }
   
