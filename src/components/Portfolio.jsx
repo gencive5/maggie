@@ -21,7 +21,6 @@ const Portfolio = () => {
   useEffect(() => {
     const handleScroll = () => {
       const isMobile = window.innerWidth <= 768; // Check if it's mobile
-      const portfolioSection = document.querySelector(".container"); // Portfolio section
       
       if (isMobile) {
         return; // Disable parallax effect on mobile

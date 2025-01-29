@@ -2,9 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Portfolio from './components/Portfolio';
-import ImageCarousel from './components/ImageCarousel';
 import MobileParallax from "./components/MobileParallax";
-
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -17,7 +15,6 @@ function App() {
         <div className="page-content-wrapper">
           <Routes>
             <Route path="/" element={<Portfolio />} />
-            <Route path="/carousel" element={<ImageCarousel />} />
           </Routes>
         </div>
       </div>

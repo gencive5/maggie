@@ -27,7 +27,6 @@
   }
   
 
-
 /* General Reset */
 body {
 	margin: 0;
@@ -48,8 +47,7 @@ body {
   .wrapperr {
     display: flex;
 	flex-direction: row; /* Arrange children horizontally */
-	height: 100vh; /* Full height of the viewport */
-	
+	height: 100vh; /* Full height of the viewport */	
   }
   
   .page-content-wrapper {
@@ -88,17 +86,13 @@ body {
 	.sidebar-wrapper {
 	  margin-left: 0;
 	  width: 4rem;
-		will-change: transform;
-		transition: transform 0.1s ease-out;
-		
-		top: 0;
-		left: 0;
-		
-			scroll-behavior: smooth;
-			transform: translate3d(0, 0, 0);
-			will-change: transform;
-		
-		
+	  will-change: transform;
+      transition: transform 0.1s ease-out;
+	  top: 0;
+	  left: 0;
+	  scroll-behavior: smooth;
+	  transform: translate3d(0, 0, 0);
+	  will-change: transform;
 	  }
 
 	.wrapper {
@@ -106,8 +100,7 @@ body {
 	   flex-direction: row; /* Arrange children horizontally */
 	   width: 4rem;	
 	}
-
-	  
+  
   }
   
   /* Sidebar */
@@ -202,52 +195,7 @@ body {
 	
   }
 
-  .carousel-container {
-	position: relative;
-	padding: 20px;
-	text-align: center;
-	width: 100%;
-	height: auto;
-  }
-  
-  .back-button {
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	background-color: #e72700;
-	color: white;
-	border: none;
-	padding: 10px 20px;
-	border-radius: 5px;
-	cursor: pointer;
-	font-size: 16px;
-	z-index: 500;
-  }
-  
-  .back-button:hover {
-	background-color: #e72700;
-  }
-  
-  .carousel-swiper {
-    width: 100%;
-    max-width: 800px; /* Set a max width for the Swiper */
-    margin: 0 auto;
-}
-  
-  .img-slide {
-    width: 80%; /* Ensure the image fits within the container */
-    height: auto; /* Maintain the aspect ratio */
-    object-fit: contain; /* Ensure the entire image is visible */
-    display: block;
-    margin: 0 auto; /* Center the image */
-}
-  
-  .carousel-item h3 {
-	margin-top: 10px;
-	font-size: 20px;
-	color: #333;
-  }
-  
+
 
   .image-modal {
 	position: fixed;
