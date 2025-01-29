@@ -2,29 +2,36 @@ import { useEffect } from "react";
 
 const MobileParallax = () => {
   useEffect(() => {
+    let ticking = false; // Prevent excessive scroll event calls
+
     const handleScroll = () => {
-      const isMobile = window.innerWidth <= 768;
-      if (!isMobile) return; // Only run this on mobile
+      if (ticking) return; // Skip if already updating
 
-      const sidebar = document.querySelector(".sidebar-wrapper");
-      const portfolio = document.querySelector(".page-content-wrapper");
+      ticking = true;
+      requestAnimationFrame(() => {
+        const isMobile = window.innerWidth <= 768;
+        if (!isMobile) return;
 
-      if (sidebar && portfolio) {
-        const scrollY = window.scrollY;
+        const sidebar = document.querySelector(".sidebar-wrapper");
+        const portfolio = document.querySelector(".page-content-wrapper");
 
-        // Sidebar moves slower (parallax effect)
-        sidebar.style.transform = `translate3d(0, ${scrollY * 0.3}px, 0)`;
+        if (sidebar && portfolio) {
+          const scrollY = window.scrollY;
 
-        // Portfolio moves at normal speed (or slightly faster)
-        portfolio.style.transform = `translate3d(0, ${scrollY * 0.7}px, 0)`;
-      }
+          // Apply smooth parallax effect
+          sidebar.style.transform = `translate3d(0, ${scrollY * 0.2}px, 0)`;
+          portfolio.style.transform = `translate3d(0, ${scrollY * 0.6}px, 0)`;
+        }
+
+        ticking = false; // Allow next update
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return null; // This component doesn't render anything, just applies effects
+  return null; // This component is only for effects, no UI
 };
 
 export default MobileParallax;
