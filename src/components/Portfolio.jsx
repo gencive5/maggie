@@ -13,7 +13,7 @@ import roversi from "/assets/images/roversi.jpg";
 import viktor5 from "/assets/images/viktor5.jpg";
 import viktor2 from "/assets/images/viktor2.jpg";
 import richemond from "/assets/images/richemond.jpg";
-import fievre from "/assets/images/fievre.jpg";
+import fievre from "/assets/images/fever.jpg";
 
 const Portfolio = () => {
   const [selectedImage, setSelectedImage] = useState(null);
