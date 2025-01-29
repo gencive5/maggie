@@ -1,21 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "../App.css";
 import sidebar from "/assets/images/sidebar2.png";
 
-
 const Sidebar = () => {
-  const [isToggled, setIsToggled] = useState(false);
-
-  const handleToggle = () => {
-    setIsToggled(!isToggled);
-  };
-
   return (
-    <div className={`wrapper ${isToggled ? 'toggled' : ''}`}>
-      
+    <div className="wrapper">
       <div className="sidebar-wrapper">
-      <img src={sidebar} className="d-block"/>
-        
+        <img src={sidebar} className="d-block" alt="Sidebar" />
       </div>
     </div>
   );
