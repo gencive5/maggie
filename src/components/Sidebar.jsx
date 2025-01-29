@@ -13,7 +13,7 @@ const Sidebar = () => {
   return (
     <div className={`wrapper ${isToggled ? 'toggled' : ''}`}>
       
-      <div className="sidebar-wrapper" data-rate="0.3">
+      <div className="sidebar-wrapper" data-rate="0.1">
       <img src={sidebar} className="d-block"/>
         
       </div>
