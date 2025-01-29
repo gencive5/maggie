@@ -93,7 +93,11 @@ body {
 		
 		top: 0;
 		left: 0;
- /* Makes sure it spans full height */
+		
+			scroll-behavior: smooth;
+			transform: translate3d(0, 0, 0);
+			will-change: transform;
+		
 		
 	  }
 
