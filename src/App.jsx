@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Portfolio from './components/Portfolio';
 import ImageCarousel from './components/ImageCarousel';
+import MobileParallax from "./components/MobileParallax";
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -20,6 +21,8 @@ function App() {
           </Routes>
         </div>
       </div>
+
+      <MobileParallax />
     </Router>
   );
 }
