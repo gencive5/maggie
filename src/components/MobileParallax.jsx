@@ -1,26 +1,31 @@
 import { useEffect } from "react";
+import Lenis from "lenis"; // ✅ Correct import for the latest version
 
 const MobileParallax = () => {
   useEffect(() => {
-    const handleScroll = () => {
-      const isMobile = window.innerWidth <= 768;
-      if (!isMobile) return; // Run only on mobile
+    const isMobile = window.innerWidth <= 768;
+    if (!isMobile) return;
 
-      const sidebar = document.querySelector(".sidebar-wrapper");
-      if (!sidebar) return;
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => 1 - Math.pow(1 - t, 3),
+      smooth: true,
+      smoothTouch: true,
+    });
 
-      // Use data-rate for parallax effect (like desktop portfolio)
-      const rate = parseFloat(sidebar.dataset.rate || "0.3"); // Default to 0.3
-      const posY = window.scrollY * rate;
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
 
-      sidebar.style.transform = `translate3d(0px, ${posY}px, 0px)`;
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
     };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return null; // No UI, just effects
+  return null;
 };
 
 export default MobileParallax;
