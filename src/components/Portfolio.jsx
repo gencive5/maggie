@@ -22,10 +22,15 @@ const Portfolio = () => {
   useEffect(() => {
     const handleScroll = () => {
       const targets = document.querySelectorAll(".scroll");
+      const isMobile = window.innerWidth <= 768; // Mobile detection
 
       targets.forEach((target) => {
-        const rate = parseFloat(target.dataset.rate || "0");
+        let rate = parseFloat(target.dataset.rate || "0");
         const direction = target.dataset.direction || "vertical";
+
+        if (isMobile) {
+          rate *= 0.05; // Reduce the rate by 70% on mobile
+        }
 
         if (direction === "vertical") {
           const pos = window.pageYOffset * rate;
@@ -63,7 +68,6 @@ const Portfolio = () => {
     { src: roversi, title: "Nicola Delorme" },
     { src: viktor5, title: "Viktor Verana, 5yntax 3rr0r, Véro" },
     { src: viktor2, title: "Viktor Verana, 5yntax 3rr0r, Véro" },
-    
   ];
 
   const handleImageClick = (image) => {
