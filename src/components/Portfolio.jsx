@@ -4,7 +4,6 @@ import creamsoda from "/assets/images/creamsoda2.jpg";
 import creamsoda2 from "/assets/images/creamsoda5.jpg";
 import randi from "/assets/images/randi.jpg";
 import randi2 from "/assets/images/randi3.jpg";
-import raisa2 from "/assets/images/raisa2.jpg";
 import sasha from "/assets/images/sasha.jpg";
 import sasha2 from "/assets/images/sasha2.jpg";
 import creamsoda3 from "/assets/images/creamsoda3.jpg";
@@ -57,13 +56,12 @@ const Portfolio = () => {
     { src: creamsoda, title: "Tim Gao" },
     { src: randi, title: "Randi" },
     { src: randi2, title: "Randi" },
-    { src: raisa2, title: "Emre Unal, Raisa Vanessa" },
     { src: sasha, title: "Sasha Gymn" },
     { src: sasha2, title: "Sasha Gymn" },
     { src: creamsoda3, title: "Tim Gao" },
     { src: creamsoda2, title: "Tim Gao" },
     { src: fang2, title: "Knas Vang, Fang Dong" },
-    { src: richemond, title: "Richemond Ourega, Hôtel Dinosaure Club/Mag" },
+    { src: richemond, title: "Richemond Ourega, Hôtel Dinosaure Club" },
     { src: fang357, title: "Knas Vang, Fang Dong" },
     { src: fievre, title: "Fièvre" },
     { src: roversi, title: "Nicola Delorme" },
@@ -88,7 +86,7 @@ const Portfolio = () => {
           data-direction="vertical"
           className="scroll col-xs-12 col-sm-6 col-md-4"
         >
-          {portfolioItems.slice(0, 6).map((item, index) => (
+          {portfolioItems.slice(0, 5).map((item, index) => (
             <div className="portfolio-item" key={index}>
               <div className="hover-bg" onClick={() => handleImageClick(item)}>
                 <img
@@ -107,7 +105,7 @@ const Portfolio = () => {
           data-direction="vertical"
           className="scroll col-xs-12 col-sm-6 col-md-4"
         >
-          {portfolioItems.slice(6, 11).map((item, index) => (
+          {portfolioItems.slice(5, 10).map((item, index) => (
             <div className="portfolio-item" key={index}>
               <div className="hover-bg" onClick={() => handleImageClick(item)}>
                 <img
@@ -126,7 +124,7 @@ const Portfolio = () => {
           data-direction="vertical"
           className="scroll col-xs-12 col-sm-6 col-md-4"
         >
-          {portfolioItems.slice(11, 15).map((item, index) => (
+          {portfolioItems.slice(10, 15).map((item, index) => (
             <div className="portfolio-item" key={index}>
               <div className="hover-bg" onClick={() => handleImageClick(item)}>
                 <img
