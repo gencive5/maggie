@@ -29,7 +29,7 @@ const Portfolio = () => {
         const direction = target.dataset.direction || "vertical";
 
         if (isMobile) {
-          rate *= 0.05; // Reduce the rate by 70% on mobile
+          rate *= 0.03; // Reduce the rate by 70% on mobile
         }
 
         if (direction === "vertical") {
