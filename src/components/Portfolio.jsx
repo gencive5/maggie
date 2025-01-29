@@ -20,20 +20,24 @@ const Portfolio = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const targets = document.querySelectorAll(".scroll");
-      const isMobile = window.innerWidth <= 768; // Check for mobile screen size
+      const isMobile = window.innerWidth <= 768; // Check if it's mobile
+      const portfolioSection = document.querySelector(".container"); // Portfolio section
+      
+      if (isMobile) {
+        // Increase the overall scrolling speed for portfolio section
+        
+        window.scrollBy(0, 10); // Increase scrolling speed manually
+        return; // Skip parallax effect
+      }
 
+      // Apply parallax scrolling effect ONLY on desktop
+      const targets = document.querySelectorAll(".scroll");
       targets.forEach((target) => {
         let rate = parseFloat(target.dataset.rate || "0");
         const direction = target.dataset.direction || "vertical";
 
-        if (isMobile) {
-          rate *= 0.03; // Reduce the parallax rate by 70% on mobile
-        }
-
         if (direction === "vertical") {
-          const speedMultiplier = isMobile ? 25 : 1; // Increase scrolling speed for mobile
-          const pos = window.pageYOffset * rate * speedMultiplier;
+          const pos = window.pageYOffset * rate;
           target.style.transform = `translate3d(0px, ${pos}px, 0px)`;
         } else {
           const rateX = parseFloat(target.dataset.ratex || "0");
@@ -46,7 +50,6 @@ const Portfolio = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -57,7 +60,7 @@ const Portfolio = () => {
     { src: randi, title: "Randi" },
     { src: randi2, title: "Randi" },
     { src: sasha, title: "Sasha Gymn" },
-    { src: sasha2, title: "Sasha Gymn" },
+    { src: sasha2, title: "Sasha Gymn, Alayna Neaum" },
     { src: creamsoda3, title: "Tim Gao" },
     { src: creamsoda2, title: "Tim Gao" },
     { src: fang2, title: "Knas Vang, Fang Dong" },
