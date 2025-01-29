@@ -24,10 +24,7 @@ const Portfolio = () => {
       const portfolioSection = document.querySelector(".container"); // Portfolio section
       
       if (isMobile) {
-        // Increase the overall scrolling speed for portfolio section
-        
-        window.scrollBy(0, 10); // Increase scrolling speed manually
-        return; // Skip parallax effect
+        return; // Disable parallax effect on mobile
       }
 
       // Apply parallax scrolling effect ONLY on desktop
