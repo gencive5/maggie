@@ -100,7 +100,6 @@ body {
 	   flex-direction: row; /* Arrange children horizontally */
 	   width: 4rem;	
 	}
-  
   }
   
   /* Sidebar */
@@ -129,7 +128,7 @@ body {
   }
   
   .portfolio-item {
-	margin: 10px 0;
+	margin: 1rem 0;
 	width: 100%;
 	height: auto;
 	transition: all 0.5s ease-out;
