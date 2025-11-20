@@ -14,6 +14,8 @@ import viktor5 from "/assets/images/viktor5.jpg";
 import viktor2 from "/assets/images/viktor2.jpg";
 import richemond from "/assets/images/richemond.jpg";
 import fievre from "/assets/images/fever.jpg";
+import yoav from "/assets/images/yoav.jpg";
+
 
 const Portfolio = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -57,6 +59,7 @@ const Portfolio = () => {
     { src: randi2, title: "Randi" },
     { src: sasha, title: "Sasha Gymn" },
     { src: sasha2, title: "Sasha Gymn, Alayna Neaum" },
+    { src: yoav, title: "Yoav Paul" },
     { src: creamsoda3, title: "Tim Gao" },
     { src: creamsoda2, title: "Tim Gao" },
     { src: fang2, title: "Knas Vang, Heavy Herbe" },
@@ -85,7 +88,7 @@ const Portfolio = () => {
           data-direction="vertical"
           className="scroll col-xs-12 col-sm-6 col-md-4"
         >
-          {portfolioItems.slice(0, 5).map((item, index) => (
+          {portfolioItems.slice(0, 6).map((item, index) => (
             <div className="portfolio-item" key={index}>
               <div className="hover-bg" onClick={() => handleImageClick(item)}>
                 <img
@@ -104,7 +107,7 @@ const Portfolio = () => {
           data-direction="vertical"
           className="scroll col-xs-12 col-sm-6 col-md-4"
         >
-          {portfolioItems.slice(5, 10).map((item, index) => (
+          {portfolioItems.slice(6, 11).map((item, index) => (
             <div className="portfolio-item" key={index}>
               <div className="hover-bg" onClick={() => handleImageClick(item)}>
                 <img
@@ -123,7 +126,7 @@ const Portfolio = () => {
           data-direction="vertical"
           className="scroll col-xs-12 col-sm-6 col-md-4"
         >
-          {portfolioItems.slice(10, 15).map((item, index) => (
+          {portfolioItems.slice(11, 16).map((item, index) => (
             <div className="portfolio-item" key={index}>
               <div className="hover-bg" onClick={() => handleImageClick(item)}>
                 <img
