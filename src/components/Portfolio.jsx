@@ -15,6 +15,7 @@ import viktor2 from "/assets/images/viktor2.jpg";
 import richemond from "/assets/images/richemond.jpg";
 import fievre from "/assets/images/fever.jpg";
 import yoav from "/assets/images/yoav.jpg";
+import yoav2 from "/assets/images/yoav4.jpg";
 
 
 const Portfolio = () => {
@@ -54,13 +55,14 @@ const Portfolio = () => {
   }, []);
 
   const portfolioItems = [
-    { src: creamsoda, title: "Tim Gao" },
+    
     { src: randi, title: "Randi" },
     { src: randi2, title: "Randi" },
     { src: sasha, title: "Sasha Gymn" },
-    { src: sasha2, title: "Sasha Gymn, Alayna Neaum" },
+    
     { src: yoav, title: "Yoav Paul" },
-    { src: creamsoda3, title: "Tim Gao" },
+    { src: yoav2, title: "Yoav Paul" },
+   
     { src: creamsoda2, title: "Tim Gao" },
     { src: fang2, title: "Knas Vang, Heavy Herbe" },
     { src: richemond, title: "Hôtel Dinosaure Mag" },
@@ -88,7 +90,7 @@ const Portfolio = () => {
           data-direction="vertical"
           className="scroll col-xs-12 col-sm-6 col-md-4"
         >
-          {portfolioItems.slice(0, 6).map((item, index) => (
+          {portfolioItems.slice(0, 5).map((item, index) => (
             <div className="portfolio-item" key={index}>
               <div className="hover-bg" onClick={() => handleImageClick(item)}>
                 <img
@@ -107,7 +109,7 @@ const Portfolio = () => {
           data-direction="vertical"
           className="scroll col-xs-12 col-sm-6 col-md-4"
         >
-          {portfolioItems.slice(6, 11).map((item, index) => (
+          {portfolioItems.slice(5, 9).map((item, index) => (
             <div className="portfolio-item" key={index}>
               <div className="hover-bg" onClick={() => handleImageClick(item)}>
                 <img
@@ -126,7 +128,7 @@ const Portfolio = () => {
           data-direction="vertical"
           className="scroll col-xs-12 col-sm-6 col-md-4"
         >
-          {portfolioItems.slice(11, 16).map((item, index) => (
+          {portfolioItems.slice(9, 13).map((item, index) => (
             <div className="portfolio-item" key={index}>
               <div className="hover-bg" onClick={() => handleImageClick(item)}>
                 <img
